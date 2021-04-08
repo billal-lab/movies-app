@@ -1,0 +1,160 @@
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+.App {
+  padding-top: 5vh;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background-color: rgb(245, 245, 245);
+  width: 100%;
+  margin: auto;
+}
+
+.section{
+  width: 90%;
+  margin:auto;
+  padding-bottom: 20px;
+}
+
+@media (max-width:400px){
+  .section{
+    width: 100%;
+  }
+}
+
+.cards-cantainer{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  min-height:80vh;
+}
+
+
+
+.card{
+  border: 1px solid rgb(148, 148, 148);
+  border-radius: 5px;
+  position: relative;
+  height: 400px;
+  width: 300px;
+  margin-bottom : 10px;
+  background-color : white;
+  animation: anim-card 1s;
+}
+
+
+@keyframes anim-card{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.card-header{
+  background-color : rgba(255, 255, 255, 0.9);
+  position: absolute;
+  border-radius: 5px;
+  top:0;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.card-body{
+  height: 70%;
+  width : 100%;
+  overflow: hidden;
+}
+
+.card-footer{
+  height: 30%;
+  width: 100%;
+}
+
+.card-body img{
+  height: 100%;
+  width:100%;
+}
+
+.card-footer-likes{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.card-footer-likes div{
+  text-align: center;
+}
+
+
+.card-footer-category{
+  border-top: 1px solid;
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.delete-icon:hover{
+  color: red;
+  transition: 0.5s transform;
+  transform: scale(1.2);
+}
+
+.icon{
+  color: white;
+  stroke: black;
+  stroke-width: 1px;
+  display: block;
+}
+
+.icon:hover{
+  color: rgb(102, 102, 187,0.5);
+  transition: 0.5s;
+}
+.active{
+    color: rgb(102, 102, 187);
+}
+
+.dislike{
+  transform: rotate(180deg);
+}
+
+
+.paginate-cantainer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.paginate-cantainer div{
+  background-color : rgb(102, 102, 187);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.disabled {
+  cursor: not-allowed !important;
+  background-color : rgb(155, 155, 219) !important;
+}
+
+.info-paginate{
+  display: flex;
+  justify-content: space-between;
+}
+.choice-paginate{
+  width: 100px;
+}
+
+.card:hover{
+  z-index: 1;
+  transform: scale(1.07);
+  transition: 0.8s ease;
+}
