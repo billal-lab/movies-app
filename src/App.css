@@ -19,11 +19,6 @@
   padding-bottom: 20px;
 }
 
-@media (max-width:400px){
-  .section{
-    width: 100%;
-  }
-}
 
 .cards-cantainer{
   display: flex;
@@ -38,11 +33,20 @@
   border: 1px solid rgb(148, 148, 148);
   border-radius: 5px;
   position: relative;
-  height: 400px;
-  width: 300px;
+  height: 600px;
+  width: 500px;
   margin-bottom : 10px;
   background-color : white;
   animation: anim-card 1s;
+}
+
+@media (max-width:700px){
+  .section{
+    width: 90%;
+  }
+  .card{
+    width: 100%;
+  }
 }
 
 
@@ -51,7 +55,7 @@
   to {opacity: 1;}
 }
 .card-header{
-  background-color : rgba(255, 255, 255, 0.9);
+  background-color : rgba(255, 255, 255, 0.8);
   position: absolute;
   border-radius: 5px;
   top:0;
@@ -90,6 +94,7 @@
 
 .card-footer-likes div{
   text-align: center;
+  font-size: 20px;
 }
 
 
@@ -112,7 +117,6 @@
   color: white;
   stroke: black;
   stroke-width: 1px;
-  display: block;
 }
 
 .icon:hover{
@@ -148,6 +152,7 @@
 .info-paginate{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .choice-paginate{
   width: 100px;

@@ -119,29 +119,29 @@ function App() {
   const displayCards = () =>{   // diplay all movies
       return getSelectedMovies().slice(offest,offest+limit).map((movie, index)=>{
           return (<div key={movie.id} className="card">
-                  <div className="card-header">
-                        <h2>{movie.title}</h2>
-                        <DeleteIcon className="delete-icon" onClick={(e)=>{onDeleteHandler(e,movie)}}/>
-                  </div>
-                  <div className="card-body">
-                      <img alt= {movie.title} src={`https://picsum.photos/seed/${movie.id}/200/200`} />
-                  </div>
-                  <div className="card-footer">
-                      <div className="card-footer-likes">
-                          <div>
-                            <ThumbUpAltIcon onClick={() =>{onLikeHandler(movie)}} className={"icon " + (liked.includes(movie) ? "active": "" )}/>
-                            <p>{movie.likes} likes</p>
-                          </div>
-                          <div>
-                            <ThumbUpAltIcon onClick={() =>{onDisLikeHandler(movie)}} className={"icon dislike " + (disliked.includes(movie) ? "active": "" )}/>
-                            <p>{movie.dislikes} dislikes</p>
-                          </div>
-                      </div>
-                      <div className="card-footer-category">
-                            <h5>{movie.category}</h5>
-                      </div>
-                  </div>
-              </div>)
+                    <div className="card-header">
+                          <h2>{movie.title}</h2>
+                          <DeleteIcon className="delete-icon" onClick={(e)=>{onDeleteHandler(e,movie)}}/>
+                    </div>
+                    <div className="card-body">
+                        <img alt= {movie.title} src={`https://picsum.photos/seed/${movie.id}/200/200`} />
+                    </div>
+                    <div className="card-footer">
+                        <div className="card-footer-likes">
+                            <div>
+                              <ThumbUpAltIcon fontSize="large" onClick={() =>{onLikeHandler(movie)}} className={"icon " + (liked.includes(movie) ? "active": "" )}/>
+                              <p>{movie.likes} likes</p>
+                            </div>
+                            <div>
+                              <ThumbUpAltIcon fontSize="large" onClick={() =>{onDisLikeHandler(movie)}} className={"icon dislike " + (disliked.includes(movie) ? "active": "" )}/>
+                              <p>{movie.dislikes} dislikes</p>
+                            </div>
+                        </div>
+                        <div className="card-footer-category">
+                              <h3>{movie.category}</h3>
+                        </div>
+                    </div>
+                  </div>)
       })
   }
 
